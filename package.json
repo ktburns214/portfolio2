@@ -1,0 +1,23 @@
+{
+  "name": "portfolio2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "htmlRoutes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ktburns214/portfolio2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ktburns214/portfolio2/issues"
+  },
+  "homepage": "https://github.com/ktburns214/portfolio2#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
