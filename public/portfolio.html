@@ -5,95 +5,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-</head>
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/css/uikit.min.css" />
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/js/uikit-icons.min.js"></script>
+    </head>
+
 <body>
   
 <!-- header -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light-fixed-top">
-                <a class="navbar-brand" href="#">Katie Burns</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="portfolio.html">Portfolio<span class="sr-only"></span></a>
-                    <a class="nav-item nav-link" href="about.html">About Me</a>
-                    <a class="nav-item nav-link" href="contact.html">Contact</a>
-                  </div>
-                </div>
-              </nav>
+<nav class="uk-navbar-container" uk-navbar>
+  <div class="uk-navbar-left">
+
+      <ul class="uk-navbar-nav">
+          <li class="uk-active"><a href="#">Katie Burns</a></li>
+          <li><a href="./portfolio.html">Portfolio</a></li>
+          <li>
+            <a href="#">About</a>
+            <div class="uk-navbar-dropdown">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li><a href="./about.html">About Me</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </li>
+      </ul>
+
+  </div>
+</nav>
 
 <h1>Portfolio</h1>
 
-<!-- psychic game HW exercise -->
-<container class="hw">
-        <div class="card-deck">
-                <div class="card">
-                  <img class="card-img-top" src="./images/psychic.jpg" alt="Psychic Game">
-                  <div class="card-body">
-                    <h5 class="card-title">Psychic Game</h5>
-                    <p class="card-text">Area of focus: Javascript</p>
-                  </div>
-                  <a class="btn btn-success btn-sm" href="https://ktburns214.github.io/Psychic-Game/" role="button">Go!</a>
-                  <br>
-                  <a class="btn btn-secondary btn-sm" href="https://github.com/ktburns214/Psychic-Game.git" role="button">View code</a>
-                </div>
+<!-- slideshow for HW/projects -->
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: fade">
+    <div uk-slideshow="min-height: 250; max-height: 550">
 
-<!-- crystal collector HW exercise -->
-                <div class="card">
-                  <img class="card-img-top" src="./images/crystals.jpg" alt="Crystals Collector Game">
-                  <div class="card-body">
-                    <h5 class="card-title">Crystals Collector Game</h5>
-                    <p class="card-text">Area of focus: jQuery</p>
-                  </div>
-                  <a class="btn btn-success btn-sm" href="https://ktburns214.github.io/unit-4-game/" role="button">Go!</a>
-                  <br>
-                  <a class="btn btn-secondary btn-sm" href="https://github.com/ktburns214/unit-4-game.git" role="button">View code</a>
-                </div>
-
-<!-- Downton Abbey trivia HW exercise -->
-                <div class="card">
-                  <img class="card-img-top" src="./images/downton abbey.jpg" alt="Downton Abbey Trivia Game">
-                  <div class="card-body">
-                    <h5 class="card-title">Trivia Game</h5>
-                    <p class="card-text">Area of focus: Javascript</p>
-                  </div>
-                  <a class="btn btn-success btn-sm" href="https://ktburns214.github.io/Trivia-Game/" role="button">Go!</a>
-                  <br>
-                  <a class="btn btn-secondary btn-sm" href="https://github.com/ktburns214/Trivia-Game.git" role="button">View code</a>
-                </div>
-              </div>
-            </div>
-</div>
-</container>
-
-<br>
-<br>
-
-<!-- project #1 -->
-<container class="project">
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="./images/ElectSmart Logo.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Group Project</h5>
-          <p class="card-text">Areas of focus: Javascript, HTML, CSS, Firebase</p>
-          <a class="btn btn-success btn-sm" href="https://electsmart.github.io/ElectSmartMaster/" role="button">Go!</a>
-          <br>
-          <a class="btn btn-secondary btn-sm" href="https://github.com/ElectSmart/ElectSmartMaster.git" role="button">View code</a>
+  <ul class="uk-slideshow-items">
+      <li>
+          <img src="./images/crystals.jpg" alt="" uk-cover>
+          <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+              <h3 class="uk-margin-remove">Crystals</h3>
+              <p class="uk-margin-remove">Crystal collector game</p>
+              <p uk-margin>
+                  <button class="uk-button uk-button-default uk-button-small">Go to app</button>
+                  <button class="uk-button uk-button-default uk-button-small">View code in GitHub</button>
+              </p>
+          </div>
+      </li>
+      <li>
+          <img src="./images/downton abbey.jpg" alt="" uk-cover>
+          <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+              <h3 class="uk-margin-remove">Downton Abbey Trivia Game</h3>
+              <p class="uk-margin-remove">Downton Abbey themed trivia game</p>
+              <p uk-margin>
+                  <button class="uk-button uk-button-default uk-button-small">Go to app</button>
+                  <button class="uk-button uk-button-default uk-button-small">View code in GitHub</button>
+              </p>
+          </div>
+      </li>
+      <li>
+        <img src="./images/psychic.jpg" alt="" uk-cover>
+        <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+            <h3 class="uk-margin-remove">Psychic Game</h3>
+            <p class="uk-margin-remove">Number guessing game</p>
+            <p uk-margin>
+                <button class="uk-button uk-button-default uk-button-small">Go to app</button>
+                <button class="uk-button uk-button-default uk-button-small">View code in GitHub</button>
+            </p>
         </div>
+    </li>
+    <li>
+      <img src="./images/ElectSmart Logo.jpg" alt="" uk-cover>
+      <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+          <h3 class="uk-margin-remove">Group Project: ElectSmart</h3>
+          <p class="uk-margin-remove">Election info app</p>
+          <p uk-margin>
+              <button class="uk-button uk-button-default uk-button-small">Go to app</button>
+              <button class="uk-button uk-button-default uk-button-small">View code in GitHub</button>
+          </p>
       </div>
+  </li>
+  </ul>
+  <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+  <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
 </div>
-</container>
-<br>
-<br>
+</div>
 
-<container class="footer">
-<nav class="navbar fixed-bottom navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Watch this space</a>
-</nav>
-</container>
+<!-- psychic game HW exercise -->
+<href="https://ktburns214.github.io/Psychic-Game"></href>
+
+<href="https://github.com/ktburns214/Psychic-Game.git"></href>
+
+<!-- crystal collector HW exercise -->                  
+<href="https://ktburns214.github.io/unit-4-game"></href>
+
+<href="https://github.com/ktburns214/unit-4-game.git"></href>
+
+<!-- Downton Abbey trivia HW exercise -->             
+  <href="https://ktburns214.github.io/Trivia-Game"></href>
+                
+  <href="https://github.com/ktburns214/Trivia-Game.git"></href>
+                
+<!-- project #1 -->
+<href="https://electsmart.github.io/ElectSmartMaster"></href>
+
+<href=https://github.com/ElectSmart/ElectSmartMaster.git"></href>
+
+<!-- footer -->
 
 </body>
 </html>
